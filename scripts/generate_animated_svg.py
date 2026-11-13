@@ -1,0 +1,277 @@
+# ==============================================================================
+# generate_animated_svg.py
+# Generates futuristic animated vector architecture diagram for GitHub README
+# ==============================================================================
+
+svg_content = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" width="100%" height="100%">
+  <defs>
+    <style>
+      @keyframes flow {
+        from { stroke-dashoffset: 28; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse {
+        0% { r: 5px; opacity: 0.5; }
+        50% { r: 8px; opacity: 1; filter: drop-shadow(0 0 6px #00ffcc); }
+        100% { r: 5px; opacity: 0.5; }
+      }
+      @keyframes glow-pulse {
+        0%, 100% { filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.4)); }
+        50% { filter: drop-shadow(0 0 18px rgba(0, 229, 255, 0.9)); }
+      }
+      @keyframes tabnet-glow {
+        0%, 100% { filter: drop-shadow(0 0 10px rgba(186, 104, 200, 0.5)); }
+        50% { filter: drop-shadow(0 0 24px rgba(224, 86, 253, 0.95)); }
+      }
+      .flow-line {
+        stroke-dasharray: 7, 7;
+        animation: flow 1.2s linear infinite;
+      }
+      .pulse-dot {
+        animation: pulse 2s infinite ease-in-out;
+      }
+      .card-glow {
+        animation: glow-pulse 3s infinite ease-in-out;
+      }
+      .tabnet-card {
+        animation: tabnet-glow 2.5s infinite ease-in-out;
+      }
+      text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      }
+    </style>
+
+    <!-- Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080d1a"/>
+      <stop offset="50%" stop-color="#0d1527"/>
+      <stop offset="100%" stop-color="#0a0f1d"/>
+    </linearGradient>
+
+    <linearGradient id="card-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111c35"/>
+      <stop offset="100%" stop-color="#0a1324"/>
+    </linearGradient>
+
+    <linearGradient id="cyan-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#00ffa2"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1200" height="680" rx="16" fill="url(#bg-grad)" stroke="#1f2d4d" stroke-width="1.5"/>
+  <circle cx="200" cy="150" r="180" fill="#00e5ff" opacity="0.03" filter="blur(60px)"/>
+  <circle cx="1000" cy="450" r="220" fill="#e056fd" opacity="0.03" filter="blur(80px)"/>
+
+  <!-- Top Title Banner -->
+  <g transform="translate(50, 42)">
+    <rect x="0" y="0" width="1100" height="52" rx="10" fill="#0f1c38" stroke="#1e3567" stroke-width="1.2"/>
+    <circle cx="24" cy="26" r="6" fill="#00e5ff" class="pulse-dot"/>
+    <text x="42" y="24" fill="#00e5ff" font-size="11" font-weight="bold" letter-spacing="2">END-TO-END SYSTEM PIPELINE ARCHITECTURE</text>
+    <text x="42" y="41" fill="#ffffff" font-size="14" font-weight="bold">Uttarakhand Wildfire Susceptibility &amp; Operational Early Warning Framework</text>
+    <text x="1080" y="32" fill="#64b5f6" font-size="11" text-anchor="end">M.Tech AI/ML Minor Project • 2019–2024</text>
+  </g>
+
+  <!-- Animated Data Flow Connectors (Pipes) -->
+  <!-- Layer 1 to Layer 2 -->
+  <path d="M 180 235 L 180 275 L 340 275 L 340 310" fill="none" stroke="#00e5ff" stroke-width="2.5" class="flow-line" opacity="0.85"/>
+  <path d="M 460 235 L 460 310" fill="none" stroke="#00ffa2" stroke-width="2.5" class="flow-line" opacity="0.85"/>
+  <path d="M 740 235 L 740 275 L 560 275 L 560 310" fill="none" stroke="#ffb300" stroke-width="2.5" class="flow-line" opacity="0.85"/>
+
+  <!-- Layer 2 to Layer 3 -->
+  <path d="M 400 420 L 400 460 L 135 460 L 135 495" fill="none" stroke="#38bdf8" stroke-width="2.5" class="flow-line" opacity="0.85"/>
+  <path d="M 400 420 L 400 460 L 320 460 L 320 495" fill="none" stroke="#00ffa2" stroke-width="2.5" class="flow-line" opacity="0.85"/>
+  <path d="M 400 420 L 400 460 L 515 460 L 515 495" fill="none" stroke="#38bdf8" stroke-width="2.5" class="flow-line" opacity="0.85"/>
+  <path d="M 400 420 L 400 460 L 747 460 L 747 495" fill="none" stroke="#f472b6" stroke-width="3" class="flow-line" opacity="0.95"/>
+
+  <!-- Layer 3 to Layer 4 (Inference & Deployment) -->
+  <path d="M 747 605 L 747 635 L 940 635 L 940 430" fill="none" stroke="#ea80fc" stroke-width="2.5" class="flow-line" opacity="0.85"/>
+  <path d="M 515 605 L 515 635 L 940 635" fill="none" stroke="#a78bfa" stroke-width="2" class="flow-line" opacity="0.7"/>
+
+  <!-- Live API Connector -->
+  <path d="M 1022 235 L 1022 280" fill="none" stroke="#00e5ff" stroke-width="2.5" class="flow-line" opacity="0.9"/>
+
+  <!-- ==================== LAYER 1: DATA INGESTION ==================== -->
+  <!-- Box 1A: NASA FIRMS -->
+  <g transform="translate(50, 115)">
+    <rect width="260" height="120" rx="10" fill="url(#card-grad-1)" stroke="#00e5ff" stroke-width="1.5" opacity="0.95"/>
+    <rect x="0" y="0" width="260" height="28" rx="10" fill="#00284d"/>
+    <circle cx="16" cy="14" r="4" fill="#00e5ff"/>
+    <text x="28" y="18" fill="#00e5ff" font-size=\"11\" font-weight="bold">NASA FIRMS THERMAL HOTSPOTS</text>
+    <text x="16" y="48" fill="#ffffff" font-size="12" font-weight="bold">MODIS 1km &amp; VIIRS 375m</text>
+    <text x="16" y="68" fill="#94a3b8" font-size="10.5">• Active fire coordinates &amp; brightness</text>
+    <text x="16" y="84" fill="#94a3b8" font-size="10.5">• Spatial filtering to 5 districts</text>
+    <text x="16" y="102" fill="#38bdf8" font-size="11" font-weight="bold">➔ Ground Truth: fire_occurred</text>
+  </g>
+
+  <!-- Box 1B: NASA POWER -->
+  <g transform="translate(330, 115)">
+    <rect width="260" height="120" rx="10" fill="url(#card-grad-1)" stroke="#00ffa2" stroke-width="1.5" opacity="0.95"/>
+    <rect x="0" y="0" width="260" height="28" rx="10" fill="#003322"/>
+    <circle cx="16" cy="14" r="4" fill="#00ffa2"/>
+    <text x="28" y="18" fill="#00ffa2" font-size="11" font-weight="bold">NASA POWER API v2.2</text>
+    <text x="16" y="48" fill="#ffffff" font-size="12" font-weight="bold">Daily Surface Meteorology</text>
+    <text x="16" y="68" fill="#94a3b8" font-size="10.5">• Temp (T2M), Humidity (RH2M)</text>
+    <text x="16" y="84" fill="#94a3b8" font-size="10.5">• Precipitation sum &amp; Wind (WS10M)</text>
+    <text x="16" y="102" fill="#4ade80" font-size="11" font-weight="bold">➔ Derived: max_consec_dry_days</text>
+  </g>
+
+  <!-- Box 1C: GEE MODIS -->
+  <g transform="translate(610, 115)">
+    <rect width="260" height="120" rx="10" fill="url(#card-grad-1)" stroke="#ffb300" stroke-width="1.5" opacity="0.95"/>
+    <rect x="0" y="0" width="260" height="28" rx="10" fill="#332400"/>
+    <circle cx="16" cy="14" r="4" fill="#ffb300"/>
+    <text x="28" y="18" fill="#ffb300" font-size="11" font-weight="bold">GOOGLE EARTH ENGINE</text>
+    <text x="16" y="48" fill="#ffffff" font-size="12" font-weight="bold">MODIS Multi-Spectral Composites</text>
+    <text x="16" y="68" fill="#94a3b8" font-size="10.5">• MOD13Q1: 250m 16-day NDVI (Greenness)</text>
+    <text x="16" y="84" fill="#94a3b8" font-size="10.5">• MOD11A2: 1km 8-day LST (Surface Temp)</text>
+    <text x="16" y="102" fill="#fbbf24" font-size="11" font-weight="bold">➔ Calibrated: (DN×0.02) - 273.15 °C</text>
+  </g>
+
+  <!-- ==================== LAYER 2: HARMONIZATION & PREPROCESSING ==================== -->
+  <g transform="translate(50, 310)">
+    <rect width="820" height="110" rx="12" fill="url(#card-grad-1)" stroke="#38bdf8" stroke-width="1.8" opacity="0.95" class="card-glow"/>
+    <rect x="0" y="0" width="820" height="28" rx="12" fill="#0c264a"/>
+    <circle cx="20" cy="14" r="4" fill="#38bdf8"/>
+    <text x="32" y="18" fill="#38bdf8" font-size="11" font-weight="bold" letter-spacing="1.5">LAYER 2: DATA FUSION, PREPROCESSING &amp; SYNTHETIC CLASS BALANCING</text>
+
+    <!-- Sub-stages in Layer 2 -->
+    <g transform="translate(15, 38)">
+      <rect width="180" height="60" rx="6" fill="#0b182d" stroke="#1e3a5f"/>
+      <text x="12" y="22" fill="#ffffff" font-size="11" font-weight="bold">Spatiotemporal Fusion</text>
+      <text x="12" y="38" fill="#94a3b8" font-size="9.5">Composite Index:</text>
+      <text x="12" y="50" fill="#38bdf8" font-size="9.5" font-weight="bold">(District, ISO_Week)</text>
+    </g>
+
+    <g transform="translate(210, 38)">
+      <rect width="180" height="60" rx="6" fill="#0b182d" stroke="#1e3a5f"/>
+      <text x="12" y="22" fill="#ffffff" font-size="11" font-weight="bold">Imputation &amp; Scaling</text>
+      <text x="12" y="38" fill="#94a3b8" font-size="9.5">Median Impute (LST 21%)</text>
+      <text x="12" y="50" fill="#38bdf8" font-size="9.5" font-weight="bold">Min-Max Scaled to [0, 1]</text>
+    </g>
+
+    <g transform="translate(405, 38)">
+      <rect width="190" height="60" rx="6" fill="#0b182d" stroke="#1e3a5f"/>
+      <text x="12" y="22" fill="#ffffff" font-size="11" font-weight="bold">Stratified 80/20 Split</text>
+      <text x="12" y="38" fill="#94a3b8" font-size="9.5">Train: N = 1,256 (33.6% fire)</text>
+      <text x="12" y="50" fill="#38bdf8" font-size="9.5" font-weight="bold">Test: N = 314 (32.8% fire)</text>
+    </g>
+
+    <g transform="translate(610, 38)">
+      <rect width="195" height="60" rx="6" fill="#0b182d" stroke="#00ffa2" stroke-width="1.2"/>
+      <text x="12" y="22" fill="#00ffa2" font-size="11" font-weight="bold">ROSE Class Balancing</text>
+      <text x="12" y="38" fill="#94a3b8" font-size="9.5">Pre-ROSE: 834 / 422</text>
+      <text x="12" y="50" fill="#00ffa2" font-size="9.5" font-weight="bold">Post-ROSE: 653 / 603 (50:50)</text>
+    </g>
+  </g>
+
+  <!-- ==================== LAYER 3: MODEL BENCHMARK & DEEP LEARNING ==================== -->
+  <!-- 3A: Logistic Regression -->
+  <g transform="translate(50, 495)">
+    <rect width="170" height="110" rx="8" fill="url(#card-grad-1)" stroke="#475569" stroke-width="1.2"/>
+    <rect x="0" y="0" width="170" height="24" rx="8" fill="#1e293b"/>
+    <text x="10" y="16" fill="#94a3b8" font-size="10" font-weight="bold">LOGISTIC REGRESSION</text>
+    <text x="12" y="42" fill="#ffffff" font-size="11" font-weight="bold">GLM with Logit Link</text>
+    <text x="12" y="60" fill="#94a3b8" font-size="10">Accuracy: 81.21%</text>
+    <text x="12" y="76" fill="#94a3b8" font-size="10">Recall: 81.55%</text>
+    <text x="12" y="94" fill="#64748b" font-size="10">AUC-ROC: 0.9115</text>
+  </g>
+
+  <!-- 3B: Random Forest -->
+  <g transform="translate(235, 495)">
+    <rect width="170" height="110" rx="8" fill="url(#card-grad-1)" stroke="#00ffa2" stroke-width="1.2"/>
+    <rect x="0" y="0" width="170" height="24" rx="8" fill="#064e3b"/>
+    <text x="10" y="16" fill="#00ffa2" font-size="10" font-weight="bold">RANDOM FOREST</text>
+    <text x="12" y="42" fill="#ffffff" font-size="11" font-weight="bold">200 Trees, mtry = 3</text>
+    <text x="12" y="60" fill="#94a3b8" font-size="10">Accuracy: 83.12%</text>
+    <text x="12" y="76" fill="#94a3b8" font-size="10">Recall: 81.55%</text>
+    <text x="12" y="94" fill="#00ffa2" font-size="10.5" font-weight="bold">AUC: 0.9243 (PEAK)</text>
+  </g>
+
+  <!-- 3C: XGBoost 5-Fold Tuned -->
+  <g transform="translate(420, 495)">
+    <rect width="190" height="110" rx="8" fill="url(#card-grad-1)" stroke="#38bdf8" stroke-width="1.5"/>
+    <rect x="0" y="0" width="190" height="24" rx="8" fill="#0369a1"/>
+    <text x="10" y="16" fill="#ffffff" font-size="10" font-weight="bold">XGBOOST (5-FOLD TUNED)</text>
+    <text x="12" y="42" fill="#38bdf8" font-size="11" font-weight="bold">Depth=7, Eta=0.10, N=100</text>
+    <text x="12" y="60" fill="#38bdf8" font-size="10.5" font-weight="bold">Accuracy: 84.08% (PEAK)</text>
+    <text x="12" y="76" fill="#38bdf8" font-size="10.5" font-weight="bold">Precision: 73.04% (PEAK)</text>
+    <text x="12" y="94" fill="#94a3b8" font-size="10">AUC-ROC: 0.9213</text>
+  </g>
+
+  <!-- 3D: Proposed TabNet Architecture (Highlighted) -->
+  <g transform="translate(625, 495)" class="tabnet-card">
+    <rect width="245" height="110" rx="10" fill="#1e0b36" stroke="#e056fd" stroke-width="2.2"/>
+    <rect x="0" y="0" width="245" height="26" rx="10" fill="#4a0e78"/>
+    <circle cx="14" cy="13" r="4" fill="#e056fd" class="pulse-dot"/>
+    <text x="24" y="17" fill="#f5d0fe" font-size="10.5" font-weight="bold" letter-spacing="1">PROPOSED: TABNET NEURAL NET</text>
+    <text x="14" y="44" fill="#ffffff" font-size="11.5" font-weight="bold">Attentive Sequential Sparsemax</text>
+    <text x="14" y="62" fill="#f472b6" font-size="11" font-weight="bold">➔ RECALL: 83.50% (PEAK SENSITIVITY)</text>
+    <text x="14" y="80" fill="#f472b6" font-size="11" font-weight="bold">➔ F1-SCORE: 0.7713 (PEAK OVERALL)</text>
+    <text x="14" y="98" fill="#c084fc" font-size="10">4 Steps • Sparse Feature Selection</text>
+  </g>
+
+  <!-- ==================== LAYER 4: REAL-TIME OPERATIONAL DEPLOYMENT ==================== -->
+  <g transform="translate(895, 115)">
+    <rect width="255" height="490" rx="14" fill="url(#card-grad-1)" stroke="#e056fd" stroke-width="1.8" opacity="0.95"/>
+    <rect x="0" y="0" width="255" height="36" rx="14" fill="#3b0764"/>
+    <circle cx="18" cy="18" r="5" fill="#e056fd" class="pulse-dot"/>
+    <text x="30" y="22" fill="#f5d0fe" font-size="11" font-weight="bold" letter-spacing="1.5">LAYER 4: REAL-TIME DEPLOYMENT</text>
+
+    <!-- Sub-card: Live REST API -->
+    <g transform="translate(15, 50)">
+      <rect width="225" height="85" rx="8" fill="#130a24" stroke="#7c3aed" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#a78bfa" font-size="10.5" font-weight="bold">Open-Meteo REST API</text>
+      <text x="12" y="38" fill="#ffffff" font-size="10.5">• Live 7-day forecast ingestion</text>
+      <text x="12" y="54" fill="#94a3b8" font-size="10">• District centroid coordinates</text>
+      <text x="12" y="72" fill="#38bdf8" font-size="10" font-weight="bold">HTTP_200_OK Automated Feed</text>
+    </g>
+
+    <!-- Sub-card: 3-Tier Hazard Alert Engine -->
+    <g transform="translate(15, 150)">
+      <rect width="225" height="125" rx="8" fill="#130a24" stroke="#db2777" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#f472b6" font-size="10.5" font-weight="bold">Tiered Hazard Classification</text>
+      
+      <rect x="12" y="30" width="200" height="22" rx="4" fill="#ef4444" opacity="0.2"/>
+      <text x="20" y="45" fill="#f87171" font-size="10" font-weight="bold">TIER 1 (P ≥ 65%): CRITICAL RED</text>
+
+      <rect x="12" y="58" width="200" height="22" rx="4" fill="#f59e0b" opacity="0.2"/>
+      <text x="20" y="73" fill="#fbbf24" font-size="10" font-weight="bold">TIER 2 (35%–64%): ADVISORY</text>
+
+      <rect x="12" y="86" width="200" height="22" rx="4" fill="#10b981" opacity="0.2"/>
+      <text x="20" y="101" fill="#34d399" font-size="10" font-weight="bold">TIER 3 (P &lt; 35%): BASELINE</text>
+    </g>
+
+    <!-- Sub-card: Interactive Shiny App UI -->
+    <g transform="translate(15, 290)">
+      <rect width="225" height="185" rx="8" fill="#130a24" stroke="#06b6d4" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#22d3ee" font-size="10.5" font-weight="bold">Interactive Web Dashboard (app.R)</text>
+      <text x="12" y="38" fill="#ffffff" font-size="10">• District Selector (5 Districts)</text>
+      <text x="12" y="54" fill="#94a3b8" font-size="9.5">• 1-Click Live API Telemetry Fetch</text>
+      <text x="12" y="70" fill="#94a3b8" font-size="9.5">• Interactive Sliders (What-If Tests)</text>
+      <text x="12" y="86" fill="#94a3b8" font-size="9.5">• Side-by-Side TabNet &amp; XGBoost</text>
+      <text x="12" y="102" fill="#94a3b8" font-size="9.5">• Dynamic Field Action Protocols</text>
+
+      <rect x="12" y="120" width="200" height="52" rx="6" fill="#083344" stroke="#0891b2" stroke-width="1"/>
+      <text x="20" y="138" fill="#67e8f9" font-size="10" font-weight="bold">Browser Localhost:</text>
+      <text x="20" y="156" fill="#ffffff" font-size="11" font-weight="bold">http://127.0.0.1:7860</text>
+    </g>
+  </g>
+
+  <!-- Footer Legend -->
+  <g transform="translate(50, 642)">
+    <circle cx="6" cy="6" r="4" fill="#00e5ff"/>
+    <text x="16" y="10" fill="#64748b" font-size="9.5">Animated Stream Connectors: Active Automated Data Flow</text>
+    <circle cx="340" cy="6" r="4" fill="#e056fd"/>
+    <text x="350" y="10" fill="#64748b" font-size="9.5">Purple Highlight: Proposed Attentive Deep Learning (TabNet)</text>
+    <circle cx="730" cy="6" r="4" fill="#00ffa2"/>
+    <text x="740" y="10" fill="#64748b" font-size="9.5">Green: 50:50 Balanced Resampling &amp; Peak Threshold Models</text>
+  </g>
+</svg>
+"""
+
+with open("outputs/plots/animated_architecture.svg", "w", encoding="utf-8") as f:
+    f.write(svg_content)
+
+print("outputs/plots/animated_architecture.svg written successfully!")
