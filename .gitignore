@@ -1,0 +1,19 @@
+# History and workspace files
+.Rhistory
+.RData
+.RDataTmp
+.Ruserdata
+*.Rproj.user
+
+# Documents and notes for reading/understanding (excluded as requested)
+report/
+*.docx
+Forest_Fire_Prediction_PRD*
+First_Draft_Submission.md
+Mentor_Progress_Review.md
+Phase_1_README.md
+
+# Temporary and download caches
+downloaded_packages/
+*.log
+*.tmp
