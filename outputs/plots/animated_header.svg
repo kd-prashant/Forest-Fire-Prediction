@@ -59,8 +59,8 @@
   <circle cx="800" cy="100" r="140" fill="#00e5ff" opacity="0.05" filter="blur(60px)"/>
 
   <!-- Top Badge / Category -->
-  <rect x="30" y="24" width="280" height="24" rx="12" fill="#1e1324" stroke="#8957e5" stroke-width="1"/>
-  <text x="42" y="40" fill="#d2a8ff" font-size="10.5" font-weight="bold" letter-spacing="1">M.TECH MINOR PROJECT REPORT • 2019–2024</text>
+  <rect x="30" y="24" width="380" height="24" rx="12" fill="#1e1324" stroke="#8957e5" stroke-width="1"/>
+  <text x="42" y="40" fill="#d2a8ff" font-size="10.5" font-weight="bold" letter-spacing="1">M.TECH MINOR PROJECT • ACADEMIC SESSION 2026–27</text>
 
   <!-- Main Glowing Title -->
   <g class="glowing-title">

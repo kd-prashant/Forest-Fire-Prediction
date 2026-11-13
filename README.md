@@ -3,6 +3,7 @@
 </p>
 
 <p align="center">
+  <img src="https://img.shields.io/badge/Academic_Session-2026--27-6C5CE7?style=for-the-badge&logo=academia&logoColor=white" alt="Academic Session 2026-27" />
   <a href="https://cran.r-project.org/"><img src="https://img.shields.io/badge/R_Language-4.6.1-276DC3?style=for-the-badge&logo=r&logoColor=white" alt="R Language" /></a>
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/LibTorch_Backend-PyTorch_CPU-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" /></a>
   <a href="https://xgboost.readthedocs.io/"><img src="https://img.shields.io/badge/XGBoost-1.7.8-00B894?style=for-the-badge&logo=xgboost&logoColor=white" alt="XGBoost" /></a>
@@ -281,6 +282,6 @@ $$w_j^* = -\frac{\sum_{i \in I_j} g_i}{\sum_{i \in I_j} h_i + \lambda}, \quad \t
 ---
 
 <p align="center">
-  <b>Developed for M.Tech Minor Project Evaluation • Academic Session 2025–2026</b><br>
+  <b>Developed for M.Tech Minor Project Evaluation • Academic Session 2026–27</b><br>
   <i>Department of Computer Science & Engineering</i>
 </p>
