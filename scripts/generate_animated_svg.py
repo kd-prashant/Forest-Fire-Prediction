@@ -275,3 +275,4 @@ with open("outputs/plots/animated_architecture.svg", "w", encoding="utf-8") as f
     f.write(svg_content)
 
 print("outputs/plots/animated_architecture.svg written successfully!")
+

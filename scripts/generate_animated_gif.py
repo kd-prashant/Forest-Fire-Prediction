@@ -143,3 +143,4 @@ frames[0].save(
 )
 
 print('Animated GIF generated successfully: outputs/plots/animated_architecture.gif')
+
